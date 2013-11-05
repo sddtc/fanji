@@ -1,4 +1,4 @@
 fanji
 =====
 
-website about animate
+website about Anime
