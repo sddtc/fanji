@@ -1,5 +1,6 @@
 package controller;
 
+import com.google.common.base.Strings;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -23,7 +24,10 @@ public class Test {
             Elements el = du.select(".r_sp div");
 
             for(int i=0;i<el.size();i++) {
-                System.out.println(el.get(i).getElementsByClass("t").text());
+                String result = el.get(i).getElementsByClass("t").text();
+                if(!Strings.isNullOrEmpty(result)) {
+                    System.out.println(result);
+                }
             }
         } catch (IOException ex) {
             System.out.print("IOException");

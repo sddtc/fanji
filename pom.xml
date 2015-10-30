@@ -20,14 +20,24 @@
         <junit>4.10</junit>
         <mybatis-spring>1.1.1</mybatis-spring>
         <org.jsoup>1.8.3</org.jsoup>
+        <com.google.guava>18.0</com.google.guava>
     </properties>
 
     <dependencies>
+
+        <!--google String and Json-->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${com.google.code.gson}</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${com.google.guava}</version>
+        </dependency>
+        <!--end google-->
+
         <!-- spring -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -62,7 +72,7 @@
         </dependency>
         <!-- spring end-->
 
-        <!-- sql-->
+        <!-- sql and orm, if I put mybatis-spring before spring poms, I must exclude something-->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
@@ -101,6 +111,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <build>
         <finalName>fanji-website</finalName>
         <resources>
