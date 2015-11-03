@@ -32,4 +32,14 @@
     </bean>
     <mvc:annotation-driven />
     <mvc:resources location="/static/**" mapping="/static/**"/>
+
+    <!--定义异常处理页面-->
+    <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <prop key="java.sql.SQLException">outException</prop>
+                <prop key="java.io.IOException">outException</prop>
+            </props>
+        </property>
+    </bean>
 </beans>
