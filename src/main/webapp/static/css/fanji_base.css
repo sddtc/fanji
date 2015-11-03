@@ -1,0 +1,22 @@
+html, body {
+  height: 100%;
+}
+
+.bvideo {
+font-size:14px;
+}
+.bvideo ul li {
+list-style-type:none;
+line-height:20px;
+}
+.bvideo ul li a {
+text-decoration: none;
+color:#673AB7;
+}
+
+.footer {
+position: fixed;
+left:50%;
+bottom:0px;
+font-size:6px;
+}
