@@ -3,6 +3,19 @@
 <title>fanji</title>
 </head>
 <body>
-hi, welcome to fanji.
+<div ng-app>
+<div ng-controller="videoShowCtrl">
+{{content}}
+</div>
+</div>
+<script type="text/javascript" src="/static/js/angular-min.js"></script>
+<script type="text/javascript">
+function videoShowCtrl($scope, $http) {
+    var url = "/sddtc/video";
+    $http.get(url).success(function(data) {
+        $scope.content = data;
+    });
+}
+</script>
 </body>
 </html>

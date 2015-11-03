@@ -21,6 +21,8 @@
         <mybatis-spring>1.1.1</mybatis-spring>
         <org.jsoup>1.8.3</org.jsoup>
         <com.google.guava>18.0</com.google.guava>
+        <jackson-databind>2.2.2</jackson-databind>
+        <org.slf4j>1.7.12</org.slf4j>
     </properties>
 
     <dependencies>
@@ -105,11 +107,24 @@
             <version>${log4j}</version>
         </dependency>
         <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${org.slf4j}</version>
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit}</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Jackson JSON It can repair Spring3 Json gibberish code-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-databind}</version>
+        </dependency>
+        <!--Jackson JSON end -->
     </dependencies>
 
     <build>
