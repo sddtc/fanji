@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * sddtc's One Page App
  * Created by sddtc on 15/11/2.
  */
 @Controller
@@ -28,10 +29,12 @@ public class FixedSearchController extends BaseController{
     @RequestMapping(value="/video")
     @ResponseBody
     public String wordsSearchAtBilibli() {
+        String biliSearchUrl = "http://www.bilibili.com/search?keyword=%E5%89%91%E4%B8%89&orderby=click&page=1";
+
         Gson gson = new Gson();
         List<JsonObject> list = new ArrayList<JsonObject>();
         try {
-            Document document = Jsoup.connect("http://www.bilibili.com/search?keyword=%E5%89%91%E4%B8%89&orderby=click&page=1").get();
+            Document document = Jsoup.connect(biliSearchUrl).get();
             Elements elements = document.select(".r_sp");
             for(int i=0;i<elements.size();i++) {
                 JsonObject jsonObject = new JsonObject();
@@ -47,6 +50,7 @@ public class FixedSearchController extends BaseController{
             CONTROLLER_LOG.error("Jsoup Error:{}", ex.getMessage());
         }
 
+        System.out.println(gson.toJson(list));
         return gson.toJson(list);
     }
 }

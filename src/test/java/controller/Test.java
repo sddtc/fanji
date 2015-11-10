@@ -14,7 +14,7 @@ import java.io.IOException;
  * Created by sddtc on 15/10/29.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:spring-db.xml"})
+@ContextConfiguration(locations = {"classpath:spring-context.xml"})
 public class Test {
 
     @org.junit.Test

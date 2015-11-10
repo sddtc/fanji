@@ -23,6 +23,8 @@
         <com.google.guava>18.0</com.google.guava>
         <jackson-databind>2.2.2</jackson-databind>
         <org.slf4j>1.7.12</org.slf4j>
+        <spring-data-redis>1.6.0.RELEASE</spring-data-redis>
+        <redis.clients.jedis>2.7.3</redis.clients.jedis>
     </properties>
 
     <dependencies>
@@ -125,6 +127,19 @@
             <version>${jackson-databind}</version>
         </dependency>
         <!--Jackson JSON end -->
+
+        <!--add spring-data-redis and jedis, Use it as Cache-->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>${spring-data-redis}</version>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${redis.clients.jedis}</version>
+        </dependency>
+        <!--redis end-->
     </dependencies>
 
     <build>
