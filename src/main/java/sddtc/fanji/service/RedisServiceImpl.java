@@ -5,6 +5,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  *
  * Redis data
@@ -28,12 +30,13 @@ public class RedisServiceImpl {
 
     /**
      * set value of key
+     * set key expire value
      * @param key
      * @param value
      */
     public void set(String key, String value) {
         ValueOperations<String, String> valueOperations = redisTemplate.opsForValue();
-
         valueOperations.set(key, value);
+        redisTemplate.expire(key, 7, TimeUnit.DAYS);
     }
 }

@@ -8,6 +8,8 @@ import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * Created by sddtc on 15/11/10.
  */
@@ -23,11 +25,8 @@ public class RedisTest {
     @Test
     public void test() {
         ValueOperations<String, String> valueOperations = redisTemplate.opsForValue();
-//        valueOperations.set(biliSearchUrl, "hei");
-
-        System.out.println("save it");
-
-        System.out.println("then println it");
+        valueOperations.set(biliSearchUrl, "hei");
+        redisTemplate.expire(biliSearchUrl, 5, TimeUnit.SECONDS);
         System.out.println(valueOperations.get(biliSearchUrl));
     }
 }
