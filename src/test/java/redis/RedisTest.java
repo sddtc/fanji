@@ -23,7 +23,7 @@ public class RedisTest {
     @Test
     public void test() {
         ValueOperations<String, String> valueOperations = redisTemplate.opsForValue();
-        valueOperations.set(biliSearchUrl, "hei");
+//        valueOperations.set(biliSearchUrl, "hei");
 
         System.out.println("save it");
 
