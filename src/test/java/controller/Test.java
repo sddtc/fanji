@@ -20,7 +20,7 @@ public class Test {
     @org.junit.Test
     public void test() {
         try {
-            Document du = Jsoup.connect("http://www.bilibili.com/search?keyword=%E5%89%91%E4%B8%89&orderby=click&page=1").get();
+            Document du = Jsoup.connect("http://search.bilibili.com/video?keyword=%E5%8D%A1%E7%BD%97%E5%B0%94").get();
             Elements el = du.select(".r_sp");
 
             for(int i=0;i<el.size();i++) {

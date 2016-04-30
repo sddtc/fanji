@@ -33,7 +33,7 @@ public class FixedSearchController extends BaseController{
     @RequestMapping(value="/video")
     @ResponseBody
     public String wordsSearchAtBilibli() {
-        String biliSearchUrl = "http://www.bilibili.com/search?keyword=%E5%89%91%E4%B8%89&orderby=click&page=1";
+        String biliSearchUrl = "http://search.bilibili.com/video?keyword=%E5%8D%A1%E7%BD%97%E5%B0%94";
 
         String result = redisService.get(biliSearchUrl);
 
