@@ -19,7 +19,7 @@
         <log4j>1.2.17</log4j>
         <junit>4.10</junit>
         <mybatis-spring>1.1.1</mybatis-spring>
-        <org.jsoup>1.8.3</org.jsoup>
+        <org.jsoup>1.15.3</org.jsoup>
         <com.google.guava>18.0</com.google.guava>
         <jackson-databind>2.2.2</jackson-databind>
         <org.slf4j>1.7.12</org.slf4j>
